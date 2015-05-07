@@ -1,0 +1,43 @@
+// vim: set syntax=asciidoc:
+[[orchestration_of_apps_using_openshiftv3]]
+= OpenShift v3
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== What is a PaaS? Why do you need it?
+tdb
+
+== Openshift V3 deep dive with docker and kubernetes
+tdb
+
+== Openshift Architecture  
+tdb
+
+== Description of roles of each component
+tdb
+
+== Flow of app creation process
+tdb
+
+== How SDN is involved? How namespacing is done?
+tdb
+
+== Demo
+tdb
+
+== App lifecyle using Openshift
+tdb
+
+== Using git hooks and binary builds
+tdb
+
+== Scaling using openshift(Using the power of Replication Controllers and Self healing mechanism of Kubernetes)
+tdb
+
+== Image repositories, build procedure, build hooks and flexibitlity of using STI tools with Jenkins
+tdb
+
+

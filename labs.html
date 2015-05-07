@@ -1,0 +1,1150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title>Container Workbook</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+@media screen {
+  body {
+    max-width: 50em; /* approximately 80 characters wide */
+    margin-left: 16em;
+  }
+
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 13em;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    overflow: auto;
+    border-right: 3px solid #f8f8f8;
+    background-color: white;
+  }
+
+  #toc .toclevel1 {
+    margin-top: 0.5em;
+  }
+
+  #toc .toclevel2 {
+    margin-top: 0.25em;
+    display: list-item;
+    color: #aaaaaa;
+  }
+
+  #toctitle {
+    margin-top: 0.5em;
+  }
+}
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Container Workbook</h1>
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="docker_basic_workshop">1. Docker Basics</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kernel_features_which_enables_containrization">1.1. Kernel Features which enables containrization</h3>
+<div class="paragraph"><p>tbd</p></div>
+<div class="sect3">
+<h4 id="_namespace">1.1.1. Namespace</h4>
+</div>
+<div class="sect3">
+<h4 id="_cgroup">1.1.2. Cgroup</h4>
+</div>
+<div class="sect3">
+<h4 id="_selinux">1.1.3. SElinux</h4>
+</div>
+<div class="sect3">
+<h4 id="_capabilities">1.1.4. Capabilities</h4>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_docker">1.2. Installing Docker</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_docker_container_operations">1.3. Docker container operations</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_docker_volumes">1.4. Docker volumes</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_docker_image_operations">1.5. Docker image operations</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_dockerfiles">1.6. DockerFiles</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_latest_docker_release_and_its_features">1.7. Latest Docker release and its features</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="deploying_lamp_stack_using_docker_on_fedora">2. Deploying LAMP app with Docker</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_intro_to_lamp_stack">2.1. Intro to LAMP Stack</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_deploying_lamp_stack_in_two_methods">2.2. Deploying LAMP Stack in two methods</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_pulling_pre_defined_images">2.3. Pulling pre-defined images</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_building_lamp_stack_in_an_image_using_dockerfile">2.4. Building LAMP stack in an image using Dockerfile</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker_networking">3. Docker Networking</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_container_linking">3.1. Container Linking</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_using_custom_bridge_instead_to_default_one">3.2. Using custom bridge instead to default one</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_setting_multihost_networking_with_flannel">3.3. Setting multihost networking with Flannel</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fedora_atomic">4. Project Atomic on Fedora</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_what_is_fedora_atomic_and_its_usecase">4.1. What is Fedora Atomic and its usecase</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_benefits_of_rpm_ostree_model">4.2. Benefits of rpm-ostree model</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_atomic_host_fs_structure">4.3. Atomic host FS structure</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_preview_of_cockpit">4.4. Preview of Cockpit</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_demo_on">4.5. Demo on</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_demo_on_cloud_init">4.6. demo on cloud-init</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_upgrade_rollback">4.7. upgrade/rollback</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_deploying_simple_docker_container_on_atomic_host">4.8. Deploying simple docker container on Atomic host</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_preview_of_rpm_ostree_build">4.9. Preview of rpm-ostree build</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker_native_orchestration">5. Docker Native Orchestration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_to_orchestration">5.1. Introduction to orchestration</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_why_we_need_it">5.2. Why we need it?</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_introduction_to_machine_swarm_compose">5.3. Introduction to Machine, Swarm, Compose</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_demo">5.4. Demo</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="case_study_of_docker_in_cloud_computing_environment">6. Case Study of Docker in Cloud</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_to_cloud_computing_and_walk_through_cloud_classifications_based_on_how_services_are_offered_and_access_hosting_methods">6.1. Introduction to Cloud Computing and Walk through cloud classifications (based on how services are offered and access/hosting methods)</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_how_docker_leads_the_container_technology_charge_in_cloud_computing">6.2. How docker leads the container technology charge in cloud computing ?</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_how_docker_is_being_utilized_in_popular_cloud_operating_systems_such_as">6.3. How Docker is being utilized in popular cloud operating systems such as</h3>
+<div class="paragraph"><p>tdb</p></div>
+<div class="sect3">
+<h4 id="_openstack">6.3.1. openstack</h4>
+</div>
+<div class="sect3">
+<h4 id="_cloudstack">6.3.2. cloudstack</h4>
+</div>
+<div class="sect3">
+<h4 id="_opennebula">6.3.3. OpenNebula</h4>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_if_time_permits_may_cover_about_microsoft_azure_aws_as_well">6.4. if time permits may cover about Microsoft Azure, AWS as well</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_is_docker_a_threat_to_the_cloud_ecosystem">6.5. Is Docker a threat to the cloud ecosystem ?:</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="integrating_docker_with_openstack">7. Docker Integration with Openstack</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_to_docker_amp_openstack">7.1. Introduction to docker &amp; openstack</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_why_we_need_it_2">7.2. Why we need it?</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_how_docker_can_be_intergrated_with_openstack_for_different_uses">7.3. How docker can be intergrated with openstack for different uses.</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_comapare_its_benefits">7.4. comapare its benefits.</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_demo_2">7.5. Demo</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ansible_for_automation_in_it_and_docker_provisioning">8. Ansible</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ansible_and_docker_need_for_automation">8.1. Ansible and docker : Need for automation</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_brief_overview_of_docker_modules_in_ansible">8.2. Brief overview of docker modules in ansible</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_deployment_and_management_of_docker_using_ansible">8.3. Deployment and management of docker using ansible</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_demo_3">8.4. Demo</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hands_on_kubernetes">9. k8s hands on</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_concepts">9.1. Concepts</h3>
+<div class="paragraph"><p>tdb</p></div>
+<div class="sect3">
+<h4 id="_node">9.1.1. Node</h4>
+</div>
+<div class="sect3">
+<h4 id="_pods">9.1.2. Pods</h4>
+</div>
+<div class="sect3">
+<h4 id="_master">9.1.3. Master</h4>
+</div>
+<div class="sect3">
+<h4 id="_services">9.1.4. Services</h4>
+</div>
+<div class="sect3">
+<h4 id="_labels">9.1.5. Labels</h4>
+</div>
+<div class="sect3">
+<h4 id="_replication_controllers">9.1.6. Replication Controllers</h4>
+</div>
+<div class="sect3">
+<h4 id="_volumes">9.1.7. Volumes</h4>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_kubernetes_through_vagrant">9.2. Setting up Kubernetes through Vagrant</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_starting_pods_rc_services">9.3. Starting pods/RC/services</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_deploying_wordpress">9.4. Deploying Wordpress</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="orchestration_of_apps_using_openshiftv3">10. OpenShift v3</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_what_is_a_paas_why_do_you_need_it">10.1. What is a PaaS? Why do you need it?</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_openshift_v3_deep_dive_with_docker_and_kubernetes">10.2. Openshift V3 deep dive with docker and kubernetes</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_openshift_architecture">10.3. Openshift Architecture</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_description_of_roles_of_each_component">10.4. Description of roles of each component</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_flow_of_app_creation_process">10.5. Flow of app creation process</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_how_sdn_is_involved_how_namespacing_is_done">10.6. How SDN is involved? How namespacing is done?</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_demo_4">10.7. Demo</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_app_lifecyle_using_openshift">10.8. App lifecyle using Openshift</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_using_git_hooks_and_binary_builds">10.9. Using git hooks and binary builds</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_scaling_using_openshift_using_the_power_of_replication_controllers_and_self_healing_mechanism_of_kubernetes">10.10. Scaling using openshift(Using the power of Replication Controllers and Self healing mechanism of Kubernetes)</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_image_repositories_build_procedure_build_hooks_and_flexibitlity_of_using_sti_tools_with_jenkins">10.11. Image repositories, build procedure, build hooks and flexibitlity of using STI tools with Jenkins</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker_security">11. Docker Security</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_selinux_2">11.1. SELinux</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_thumb_rules">11.2. Thumb rules</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_running_privileged_containers_and_linux_capabilities">11.3. Running privileged containers and Linux Capabilities</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+<div class="sect2">
+<h3 id="_insecure_registry">11.4. insecure registry</h3>
+<div class="paragraph"><p>tdb</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="rkt_from_coreos">12. RKT</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduce_rocket">12.1. Introduce Rocket</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_app_container_specification">12.2. What is  App Container specification</h3>
+<div class="paragraph"><p>tbd</p></div>
+<div class="sect3">
+<h4 id="_app_container_image">12.2.1. App Container Image</h4>
+</div>
+<div class="sect3">
+<h4 id="_app_container_runtime">12.2.2. App Container runtime</h4>
+</div>
+<div class="sect3">
+<h4 id="_app_container_discovery">12.2.3. App Container discovery</h4>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_differrent_it_is_from_docker_process_mode">12.3. How differrent it is from Docker process mode</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+<div class="sect2">
+<h3 id="_running_a_demp_app_on_rkt">12.4. Running a demp app on RKT</h3>
+<div class="paragraph"><p>tbd</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-05-07 14:11:25 IST
+</div>
+</div>
+</body>
+</html>

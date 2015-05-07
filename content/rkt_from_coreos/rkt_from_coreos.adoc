@@ -1,0 +1,25 @@
+// vim: set syntax=asciidoc:
+[[rkt_from_coreos]]
+= RKT
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Introduce Rocket
+tbd 
+
+== What is  App Container specification
+tbd 
+
+=== App Container Image
+=== App Container runtime
+=== App Container discovery
+
+== How differrent it is from Docker process mode
+tbd 
+
+== Running a demp app on RKT
+tbd 
+

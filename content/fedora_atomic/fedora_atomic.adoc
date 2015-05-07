@@ -1,0 +1,37 @@
+// vim: set syntax=asciidoc:
+[[fedora_atomic]]
+= Project Atomic on Fedora
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== What is Fedora Atomic and its usecase
+tbd
+
+== Benefits of rpm-ostree model
+tbd
+
+== Atomic host FS structure
+tbd
+
+== Preview of Cockpit
+tbd
+
+== Demo on 
+tbd
+
+== demo on cloud-init
+tbd
+
+== upgrade/rollback
+tbd
+
+== Deploying simple docker container on Atomic host
+tbd
+
+== Preview of rpm-ostree build
+tbd
+
+

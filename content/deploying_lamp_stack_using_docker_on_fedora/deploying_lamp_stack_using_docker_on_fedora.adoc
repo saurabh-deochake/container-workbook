@@ -1,0 +1,23 @@
+// vim: set syntax=asciidoc:
+[[deploying_lamp_stack_using_docker_on_fedora]]
+= Deploying LAMP app with Docker
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+
+
+== Intro to LAMP Stack 
+tdb
+
+== Deploying LAMP Stack in two methods
+tdb
+
+==  Pulling pre-defined images
+tdb
+
+==  Building LAMP stack in an image using Dockerfile
+tdb
+

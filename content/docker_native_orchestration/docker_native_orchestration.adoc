@@ -1,0 +1,22 @@
+// vim: set syntax=asciidoc:
+[[docker_native_orchestration]]
+= Docker Native Orchestration
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Introduction to orchestration
+tbd
+
+== Why we need it?
+tbd
+
+== Introduction to Machine, Swarm, Compose
+tbd
+
+== Demo
+tbd
+
+

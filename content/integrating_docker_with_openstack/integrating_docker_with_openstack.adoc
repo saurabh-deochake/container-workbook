@@ -1,0 +1,24 @@
+// vim: set syntax=asciidoc:
+[[integrating_docker_with_openstack]]
+= Docker Integration with Openstack
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Introduction to docker & openstack
+tdb
+
+== Why we need it?
+tdb
+
+== How docker can be intergrated with openstack for different uses. 
+tdb
+
+== comapare its benefits. 
+tdb
+
+== Demo
+tdb
+

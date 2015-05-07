@@ -1,0 +1,28 @@
+// vim: set syntax=asciidoc:
+[[case_study_of_docker_in_cloud_computing_environment]]
+= Case Study of Docker in Cloud
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Introduction to Cloud Computing and Walk through cloud classifications (based on how services are offered and access/hosting methods)
+tdb
+
+== How docker leads the container technology charge in cloud computing ?
+tdb
+
+== How Docker is being utilized in popular cloud operating systems such as 
+tdb
+
+=== openstack
+=== cloudstack
+=== OpenNebula
+
+== if time permits may cover about Microsoft Azure, AWS as well
+tdb
+
+== Is Docker a threat to the cloud ecosystem ?:
+tdb
+

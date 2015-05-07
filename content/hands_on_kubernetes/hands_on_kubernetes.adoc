@@ -1,0 +1,29 @@
+// vim: set syntax=asciidoc:
+[[hands_on_kubernetes]]
+= k8s hands on
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Concepts 
+tdb
+
+=== Node
+=== Pods
+=== Master
+=== Services
+=== Labels
+=== Replication Controllers
+=== Volumes
+
+== Setting up Kubernetes through Vagrant
+tdb
+
+== Starting pods/RC/services
+tdb
+
+== Deploying Wordpress 
+tdb
+

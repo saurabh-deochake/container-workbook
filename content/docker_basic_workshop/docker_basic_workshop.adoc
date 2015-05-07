@@ -1,0 +1,34 @@
+// vim: set syntax=asciidoc:
+[[docker_basic_workshop]]
+= Docker Basics
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Kernel Features which enables containrization
+tbd
+
+=== Namespace
+=== Cgroup
+=== SElinux
+=== Capabilities 
+
+== Installing Docker
+tbd
+
+== Docker container operations
+tbd
+
+== Docker volumes
+tbd
+
+== Docker image operations
+tbd
+
+== DockerFiles
+tbd
+
+== Latest Docker release and its features 
+tbd

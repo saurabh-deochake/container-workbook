@@ -1,0 +1,21 @@
+// vim: set syntax=asciidoc:
+[[ansible_for_automation_in_it_and_docker_provisioning]]
+= Ansible
+:data-uri:
+:icons:
+:toc:
+:toclevels 4:
+:numbered:
+
+== Ansible and docker : Need for automation
+tdb
+
+== Brief overview of docker modules in ansible
+tdb
+
+== Deployment and management of docker using ansible
+tdb
+
+== Demo  
+tdb
+

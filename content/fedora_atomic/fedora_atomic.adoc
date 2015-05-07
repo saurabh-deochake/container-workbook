@@ -8,10 +8,10 @@
 :numbered:
 
 == What is Fedora Atomic and its usecase
-tbd
+Fedora Atomic Host is a very lightweight operating system composed out of standard Fedora rpm packages. It provides same leading edge tools with incorporating the advantages of rpm-ostree.
 
 == Benefits of rpm-ostree model
-tbd
+RPM-OSTree provides atomic updates and rollback. This means that under no circumstances, the system will be in a "partially updated" state.
 
 == Atomic host FS structure
 tbd

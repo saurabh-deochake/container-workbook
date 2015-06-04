@@ -7,7 +7,37 @@
 :toclevels 4:
 :numbered:
 
+== What are we looking for?
+
+* Scalability, maintainability, Agility, Portability.
+* Improved resource utilization.
+* A continuum of abstraction levels.
+
+== Linux containers
+
+* Using Linux kernel process isolation and resource features to give a VM
+like environment.
+
+* Docker project is around two years old, but linux containers are older than that e.g. LXC.
+
+* Some examples of linux container runtime: LXC, lmctfy, Docker, Rkt
+
+== Introducing Docker
+
+* Sand boxing of process/Application
+
+* It is an application packaging and delivery mechanism.
+
+* Lightweight container virtualization platform.
+
+== Why Docker?
+
+* Build once -> run anywhere*
+
+* tbd
+
 == Kernel Features which enables containrization
+
 tbd
 
 === Namespace
@@ -32,3 +62,8 @@ tbd
 
 == Latest Docker release and its features 
 tbd
+
+== References
+
+* http://www.slideshare.net/dotCloud/docker-intro-november
+

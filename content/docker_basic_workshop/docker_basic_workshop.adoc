@@ -30,23 +30,86 @@ like environment.
 
 * Lightweight container virtualization platform.
 
-== Why Docker?
+== Why Developers Care?
 
 * Build once -> run anywhere*
+* A clean, safe, hygenic and portable runtime environment.
+* No worries about missing dependencies, packages etc.
+* Automate testing, integration, packaging -> anything you can script.
+* It is portable* -> so it reduces the concern about portability.
 
-* tbd
+== Why Operations Care?
+
+* It reduces the time , from developing an application to putting it in to production
+* The entire lifecycle can made more efficient, consistent and repeatable.
+* Reduce the inconsistencies between development, test, production and customer environment.
+* Because the containers are so lightweight, address significant performance, costs, deployment  and portability issues.
+
+== Docker Vs Virtual Machine
+
+* Lighter than Virtual machines.
+* Less startup time
+* We can run a lot of containers on a reasonably sized host.
+* Deploying and scaling relatively easy.
 
 == Kernel Features which enables containrization
 
-tbd
+* Control Groups
+* Namespaces
+* Union filesystem
+* Kernel Security features
 
 === Namespace
+
+* It helps to create isolated workspace for each process.
+* When you run a container, Docker creates a set of namespaces for that container.
+
+
 === Cgroup
-=== SElinux
-=== Capabilities 
+
+* Control Groups are another key component of Linux Containers
+* With Cgroup we can implement resource accounting and limiting.
+* Ensure that each container gets its fair share of memory, CPU, disk I/O.
+* Thanks to Cgroup, we can make sure that single container cannot bring the system down by exhausting resources.
+
+=== Kernel Security features
+
+* Capabilities
+** By default Docker drops all capabilities except those needed.
+** "root" within a container has much less privileges than the real "root".
+** The best practice for users would be to remove all capabilities except those explicitly required for their processes.
+** Even if an intruder manages to escalate to root within a container, it will be much harder to do serious damage, or to escalate to the host
+
+* Other kernel security features: TOMOYO, AppArmor, SELinux, GRSEC, etc.
+
+=== SELinux
+
+* SELinux provides secure separation of containers by applying SELinux policy and labels. 
+
+== Docker Components
+
+* *Image* : It is a template which is used to launch containers. 
+
+* *Container* : Container holds everything that is needed for an application to run.
+
+* *Registry* : It stores and serves up the actual image assets, and it delegates authentication to the index.
+
+* *Index* : It is the front end of Registry. It manages user accounts, permissions, search, tagging, and all that nice stuff that’s in the public web interface
 
 == Installing Docker
-tbd
+
+Fedora
+^^^^^^
+
+[source, bash]
+-----------------
+$ sudo yum -y install docker
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+-----------------
+
+Refer: https://docs.docker.com/installation/fedora/
+
 
 == Docker container operations
 tbd
@@ -66,4 +129,5 @@ tbd
 == References
 
 * http://www.slideshare.net/dotCloud/docker-intro-november
-
+* http://www.slideshare.net/jamtur01/introduction-to-docker-30285720
+* http://neependra.net/docker/rootconfWorkshop.html

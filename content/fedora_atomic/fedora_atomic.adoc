@@ -14,19 +14,21 @@ Fedora Atomic Host is a very lightweight operating system composed out of standa
 RPM-OSTree provides atomic updates and rollback. This means that under no circumstances, the system will be in a "partially updated" state.
 
 == Atomic host FS structure
-tbd
+* Atomic has a read-only filesystem with exception of /etc and /var.
+* Changes made in /etc are retained by a 3-way merge.
+* Home directories are actually symbolic links to direcroties in /var.
 
 == Preview of Cockpit
-tbd
+* Cockpit project provides a way to manage a host using a web browser.
+* It can manage multiple hosts via same console. 
+* It supports single sign-on and various other authentication methods out of the box.
 
 == Demo on 
-tbd
-
-== demo on cloud-init
-tbd
+* Kubernetes and cockpit.
 
 == upgrade/rollback
-tbd
+* atomic host upgrade
+* atomic host rollback
 
 == Deploying simple docker container on Atomic host
 tbd
